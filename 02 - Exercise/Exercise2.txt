@@ -1,0 +1,53 @@
+1. Describe with your own words what a database is!
+ A database is a collection of data, which is organized, persistent and easy to access on.
+------------------------
+2. Write three points, which you request from your database and explain them!
+
+A database needs to have:
+
+Availability: It must constantely available and accessed by the DBMS
+
+Persistent: Data must remain always unharmed on crashes or runtime of programms.
+
+Redundantent-free: Redunancies causes issues on an operating DBMS, therefore the system must be designed out of those problems.
+
+Multi-access: Your system must operate fully concurrent, even when one or more users or administrators are accesing it at the same time. And send out  queries to retriev and store data.
+
+------------------------
+
+3. What are redundancies? Write about their consequences!
+
+Redunancies should be terminated from your system at all cost. Redunancies are data which exist multiple times in different forms. So, it creates a inner conflict to find the necessary information to modify.
+
+------------------------
+
+4. Discuss at least two different database models and describe two advantages and disadvantages! Do not forget that an advantage of one model can be a disadvantage of the other.
+
+
+Hierachical model:
+Pro:
+-Queries sent out to fetch data at the top are quickly accessed
+-It's easy submit new entries/datasets
+-Easier to read for a human.
+
+Con:
+-Queries sent out to fetch data at the Buttom are taking longer.
+-It's difficuilt to change the orders within the hierachy once they are set.
+-It's inconsistent.
+-Many to many relationship are not supported (only one to many).
+
+Relational model:
+Pro:
+-Can manage endless sets of data without re-add the data once again.
+-Each dataset can have his own type (INT, VARCHAR, BINARY)
+
+Con:
+-Queries can become very long and complex
+-This type of database requires alot of time and planning to be efficient, especially to avoid redundancies or NULL values.
+
+
+------------------------
+
+5. What is the difference between a table and a relation?
+Relations are actively functions that can contain equation.
+While tables are just the visualization of the output, that what the user is activelly seeing at the end.

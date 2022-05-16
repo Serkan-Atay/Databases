@@ -1,0 +1,46 @@
+-- 1. Describe in your own words what is meant with candidate key? Which two important properties should a candidate key have
+/*
+	A candidate key describes all possible attributes from within an table to get selected as primary key.
+    It's required for those keys that they contain unqiue values, which means there aren't duplicate values within the different datasets.
+    Also, the candidate key must irreducible in regard of getting removed, so no other keys get affected by that choice.
+*/
+
+-- 2. Describe two criteria’s for a „good“ Primary Key! Why do they have such a deep impact for us? 
+/*
+	A primary key should avoid user input. So that those cannot be changed afterwards.
+    A primrary key should have a basic structrue, e.g. single digits. What makes it later easier for the programming part.
+    
+*/
+
+-- 3. Explain in your own words what a Foreign Key is and why do we need this attribute for our referential integrity? 
+/*
+	A foreign key is literally a placeholder, which leads to an actually primary key from antoher table(relation)
+	The reference integrity plays an big role for foreign keys, because all foreign keys must reference in-all cases to a valid value.
+*/
+
+-- 4. Example cases (referential integrity)
+-- a. You want to insert a dataset into person. In the attribute ortID you want to insert “12”
+-- Will be denied.
+
+-- b. You want to update a dataset into person. In the attribute ortID you want to insert “16”!  
+-- Will be denied.
+
+-- c. You want to change the ID 8 to 12 from ort.
+-- Will be denied.
+
+-- d. You want to delete the ID 1 from ort.
+-- ON RESTRICT will be denied 
+-- ON CASCADES all values connected to that foreign key will be removed (domino effect)
+
+-- 5. Describe which settings can be used while creating a Foreign Key. Discuss the Dis- and Advantages!
+/*
+	RESTRICTED - Generally forbid any changes or removals, if they are set on UPDATE OR DELETE.
+    CASCADES - Highly dangerous, because it can cause a permanent loss of data and cant be recovered any more. Cascade allows to remove any bound dataset at once.
+*/
+
+-- 6. Describe which impact the setting NULLIFY causes! 
+/*
+	If you decides for NULLIFY, so you can delete an primary key so on all foreign keys will now be removed and replaced with a NULL values
+    To keep the integrity of your DKMS alive. The disadvanges you have now, is to deal with NULL values which have to be considered in your queries.
+*/
+
